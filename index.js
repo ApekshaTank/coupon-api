@@ -241,6 +241,10 @@ const coupons = [
 // Middleware
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Coupon API!');
+  });
+
 // API Endpoints
 app.get('/coupons', (req, res) => {
   res.json(coupons);
